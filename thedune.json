@@ -1,0 +1,453 @@
+{
+    "info": {
+        "_postman_id": "4044fa65-e0e8-431e-b17b-12d1d8fc988a",
+        "name": "Assignment Endpoint",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "30848407"
+    },
+    "item": [
+        {
+            "name": "CreateFunction",
+            "item": [
+                {
+                    "name": "/createUser",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"user_id\": \"user123\",\r\n    \"username\": \"username123\",\r\n    \"password\": \"password123\",\r\n    \"email\": \"email@example.com\"\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/createUser",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["createUser"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "201",
+                            "body": "\"User created successfully\""
+                        }
+                    ]
+                },
+                {
+                    "name": "/createItem",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"item_id\": \"item123\",\r\n    \"name\": \"Sword\",\r\n    \"description\": \"A sharp blade\",\r\n    \"type\": \"weapon\",\r\n    \"attributes\": {\r\n      \"damage\": 10,\r\n      \"durability\": 100\r\n    },\r\n    \"rarity\": \"common\"\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/createItem",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["createItem"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "201",
+                            "body": "\"Item created successfully\""
+                        }
+                    ]
+                },
+                {
+                    "name": "/createMonster",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"monster_id\": \"monster123\",\r\n    \"name\": \"Goblin\",\r\n    \"attributes\": {\r\n      \"strength\": 5,\r\n      \"dexterity\": 7,\r\n      \"intelligence\": 3\r\n    },\r\n    \"location\": \"Forest\"\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/createMonster",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["createMonster"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "201",
+                            "body": "\"Monster created successfully\""
+                        }
+                    ]
+                },
+                {
+                    "name": "/createTransaction",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"transaction_id\": \"txn123\",\r\n    \"user_id\": \"user123\",\r\n    \"item_id\": \"item123\",\r\n    \"transaction_type\": \"purchase\",\r\n    \"amount\": 100,\r\n    \"date\": \"2024-06-21T12:00:00Z\"\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/createTransaction",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["createTransaction"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "201",
+                            "body": "\"Transaction created successfully\""
+                        }
+                    ]
+                },
+                {
+                    "name": "/createWeapon",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"weapon_id\": \"weapon123\",\r\n    \"name\": \"Longsword\",\r\n    \"description\": \"A long and powerful blade\",\r\n    \"damage\": 15,\r\n    \"type\": \"melee\",\r\n    \"attributes\": {\r\n      \"strength\": 5,\r\n      \"durability\": 200\r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/createWeapon",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["createWeapon"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "201",
+                            "body": "\"Weapon created successfully\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ExistingFunction",
+            "item": [
+                {
+                    "name": "/existingUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/existingUser?user_id=user123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["existingUser"],
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "user123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "/existingItem",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/existingItem?item_id=item123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["existingItem"],
+                            "query": [
+                                {
+                                    "key": "item_id",
+                                    "value": "item123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "/existingMonster",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/existingMonster?monster_id=monster123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["existingMonster"],
+                            "query": [
+                                {
+                                    "key": "monster_id",
+                                    "value": "monster123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "/existingWeapon",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/existingWeapon?weapon_id=weapon123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["existingWeapon"],
+                            "query": [
+                                {
+                                    "key": "weapon_id",
+                                    "value": "weapon123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "true"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FindFunction",
+            "item": [
+                {
+                    "name": "/findUserByUsername",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/findUserByUsername?username=username123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["findUserByUsername"],
+                            "query": [
+                                {
+                                    "key": "username",
+                                    "value": "username123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "{...userObject...}"
+                        }
+                    ]
+                },
+                {
+                    "name": "/findUserById",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/findUserById?user_id=user123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["findUserById"],
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "user123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "{...userObject...}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "OtherFunction",
+            "item": [
+                {
+                    "name": "/monsterslain",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"user_id\": \"user123\",\r\n    \"monster_id\": \"monster123\"\r\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3001/monsterslain",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["monsterslain"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "{...updatedUserProfile...}"
+                        }
+                    ]
+                },
+                {
+                    "name": "/deleteUser",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3001/deleteUser?user_id=user123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["deleteUser"],
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "user123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "\"User deleted successfully\""
+                        }
+                    ]
+                },
+                {
+                    "name": "/reportUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/reportUser?user_id=user123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["reportUser"],
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "user123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "{...userDetails...}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ViewFunction",
+            "item": [
+                {
+                    "name": "/viewLeaderboard",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/viewLeaderboard",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["viewLeaderboard"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "[...top10Users...]"
+                        }
+                    ]
+                },
+                {
+                    "name": "/viewUserByAdmin",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/viewUserByAdmin?user_id=user123",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3001",
+                            "path": ["viewUserByAdmin"],
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "user123"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "status": "200",
+                            "body": "{...userDetails...}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
