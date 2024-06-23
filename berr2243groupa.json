@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "5d62029d-be07-4ba9-9a71-dc1f7c3d6031",
+		"name": "Group A API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34058278"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "127.0.0.1:5200/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"Ivan\",\r\n    \"name\": \"Ivan\",\r\n    \"email\": \"ivn.gmail.com\",\r\n    \"password\": \"ivn22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\":\"Cheese\",\r\n    \"password\":\"che22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/game/lobby",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzQ4MzIyMzM5MjNhMDRjZGU0YmE5YSIsImlhdCI6MTcxODkxMTg5NCwiZXhwIjoxNzE4OTE1NDk0fQ.NDSXiwXHBO3Li1U4wPY2tXL2OFJv0educnQMvyS8wPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/game/lobby",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"game",
+								"lobby"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/game/joinlobby",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzQ4MzJjMzM5MjNhMDRjZGU0YmE5YyIsImlhdCI6MTcxODkxMjUxNCwiZXhwIjoxNzE4OTE2MTE0fQ.pmkpQWd4N1pFilQ7RhH3VmfB7I8ZhFBOYrAZxWwEnNk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\":\"6674858333923a04cde4ba9e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/game/joinlobby",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"game",
+								"joinlobby"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/game/endgame",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\":\"6674858333923a04cde4ba9e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/game/endgame",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"game",
+								"endgame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/game/leavelobby",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\":\"6674858333923a04cde4ba9e\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/game/leavelobby",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"game",
+								"leavelobby"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "User instruction"
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "127.0.0.1:5200/admin/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jeffyeosdsdsd1\",\r\n    \"password\":\"abc123456\",\r\n    \"masterpassword\":\"SecurityHazard\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/admin/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/admin/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jeffyeo\",\r\n    \"password\":\"abc1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/admin/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/auth/changepass/(User_id)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzQ4MzJjMzM5MjNhMDRjZGU0YmE5YyIsImlhdCI6MTcxODkxMjUxNCwiZXhwIjoxNzE4OTE2MTE0fQ.pmkpQWd4N1pFilQ7RhH3VmfB7I8ZhFBOYrAZxWwEnNk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234abcd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/auth/changepass/(User_id)",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"auth",
+								"changepass",
+								"(User_id)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/auth/changepass/(User_id)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzQ4MzJjMzM5MjNhMDRjZGU0YmE5YyIsImlhdCI6MTcxODkxMjUxNCwiZXhwIjoxNzE4OTE2MTE0fQ.pmkpQWd4N1pFilQ7RhH3VmfB7I8ZhFBOYrAZxWwEnNk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234abcd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/auth/changepass/(User_id)",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"auth",
+								"changepass",
+								"(User_id)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:5200/admin/eraseuser/(User_id)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzQ4MjVhMzM5MjNhMDRjZGU0YmE5OCIsImlhdCI6MTcxODkxMTY1NywiZXhwIjoxNzE4OTEyMjU3fQ.BPVdsSVopdEIN1eqeRr7YW_sC_SLpK_rvxWUtqqmsEI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5200/admin/eraseuser/(user_id)",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5200",
+							"path": [
+								"admin",
+								"eraseuser",
+								"(user_id)"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Admin instruction"
+		}
+	]
+}
