@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "1aab515f-4d93-4346-849d-aadac080a32c",
+		"name": "2048 Game API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34298446"
+	},
+	"item": [
+		{
+			"name": "Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://databaseandcloudsystem.azurewebsites.net/",
+					"protocol": "https",
+					"host": [
+						"databaseandcloudsystem",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Aida\",\r\n    \"email\": \"aida@mail.com\",\r\n    \"password\": \"aida123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://databaseandcloudsystem.azurewebsites.net/register",
+					"protocol": "https",
+					"host": [
+						"databaseandcloudsystem",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aida@mail.com\",\r\n    \"password\": \"aida123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://databaseandcloudsystem.azurewebsites.net/login",
+					"protocol": "https",
+					"host": [
+						"databaseandcloudsystem",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveScore",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzgxMjM3MmY5OWM1MjRmYjNkM2Q3ZCIsImVtYWlsIjoiYWlkYUBtYWlsLmNvbSIsImlhdCI6MTcxOTE0NTE5NywiZXhwIjoxNzE5MTQ4Nzk3fQ.Kc6_VOVu17ef-jwZUHOhiAAHByTDmQHOVyobY2TfPdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"score\": 2630\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://databaseandcloudsystem.azurewebsites.net/saveScore",
+					"protocol": "https",
+					"host": [
+						"databaseandcloudsystem",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"saveScore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://databaseandcloudsystem.azurewebsites.net/leaderboard",
+					"protocol": "https",
+					"host": [
+						"databaseandcloudsystem",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"leaderboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
