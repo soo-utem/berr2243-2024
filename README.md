@@ -15,7 +15,7 @@ Postman: https://api.postman.com/collections/34298335-8711a105-008e-4d66-a0ee-
 998e9e8cc2f3?access_key=PMAT-01J12DT6TMVNC5YTFEEBDS5185
 
 Game: https://benr2423fuzah.azurewebsites.net <br/>
-Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/BATTLESHIP%20MULTIPLAYER.postman_collection.json
+Postman: https://github.com/soo-utem/berr2243-2024/blob/main/POSTMAN%20REPORT%20DATABASE%20GROUP%20i.pdf
 
 Game: https://brainblitzassignment.azurewebsites.net/ <br/>
 Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/3%20Brain_Blitz_Assignment_BERR2243.json
