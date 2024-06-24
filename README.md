@@ -17,9 +17,6 @@ Postman: https://api.postman.com/collections/34298335-8711a105-008e-4d66-a0ee-
 Game: https://benr2423fuzah.azurewebsites.net <br/>
 Postman:  https://github.com/soo-utem/berr2243-2024/blob/main/POSTMAN%20REPORT%20DATABASE%20GROUP%20i.pdf
 
-Game: http://databaseandcloudsystem.azurewebsites.net <br/>
-Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/2048%20Game%20API.postman_collection.json
-
 Game: https://brainblitzassignment.azurewebsites.net/ <br/>
 Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/3%20Brain_Blitz_Assignment_BERR2243.json
 
