@@ -28,6 +28,10 @@ Postman: https://github.com/soo-utem/berr2243-2024/blob/main/Postman%20JSON%20fo
 
 Game: https://github.com/soo-utem/berr2243-2024/blob/main/Assign%20(2).zip
 
+Game: http://ponggame.azurewebsites.net/ <br/>
+Postman: https://www.postman.com/aimansyahmi14/workspace/43e5f93c-743a-407a-9876-
+4fcecac6f983/share?collection=34303922-2edb0e14-8a43-4296-a502-26b4394b8282&target=embed
+
 
 
 
