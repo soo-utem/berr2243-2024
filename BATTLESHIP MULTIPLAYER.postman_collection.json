@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "b52b3dc9-45b5-49f5-b826-4995cbe360ad",
+		"name": "BATTLESHIP MULTIPLAYER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34329748"
+	},
+	"item": [
+		{
+			"name": "player sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"test2\",\r\n\"password\": \"test2123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/player/signup",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"player",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"test2\",\r\n\"password\": \"test2123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/player/login",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"player",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc5NzJkNGRlNzkyNWMxNjQ4NmVmMTEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzE5MjM1Nzk2LCJleHAiOjE3MTkyMzkzOTZ9.GGFsl4rl7pNki7k2Raa5UO65Za61ttAHI8KXwG_OUX4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/game ",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"game "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Join Game / other side player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/game/667975f2de7925c16486ef12/join",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"game",
+						"667975f2de7925c16486ef12",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Ships",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc5NzJkNGRlNzkyNWMxNjQ4NmVmMTEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzE5MjM2MDQ4LCJleHAiOjE3MTkyMzk2NDh9.2gjOPosZhGnUd6fuRd0S85nklDVJFgbau4vXhI9vJoc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"placements\": [ { \"x\": 0, \"y\": 0, \"direction\": \"horizontal\", \"shipName\": \"Aircraft Carrier\", \r\n\"size\": 5 }, { \"x\": 1, \"y\": 0, \"direction\": \"horizontal\", \"shipName\": \"Battleship\", \"size\": 4 }, { \"x\": \r\n2, \"y\": 0, \"direction\": \"horizontal\", \"shipName\": \"Cruiser\", \"size\": 3 }, { \"x\": 3, \"y\": 0, \"direction\": \r\n\"horizontal\", \"shipName\": \"Submarine\", \"size\": 3 }, { \"x\": 4, \"y\": 0, \"direction\": \"horizontal\", \r\n\"shipName\": \"Destroyer\", \"size\": 3 } ] }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/game/667975f2de7925c16486ef12/place",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"game",
+						"667975f2de7925c16486ef12",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make a Move",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc5NzJkNGRlNzkyNWMxNjQ4NmVmMTEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzE5MjM2MDQ4LCJleHAiOjE3MTkyMzk2NDh9.2gjOPosZhGnUd6fuRd0S85nklDVJFgbau4vXhI9vJoc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"x\": 0,\r\n \"y\": 0,\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "URL: https://battleship-game.azurewebsites.net/game/667975f2de7925c16486ef12/move",
+					"protocol": "URL: https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"game",
+						"667975f2de7925c16486ef12",
+						"move"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update player",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc5NzJkNGRlNzkyNWMxNjQ4NmVmMTEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzE5MjM2MDQ4LCJleHAiOjE3MTkyMzk2NDh9.2gjOPosZhGnUd6fuRd0S85nklDVJFgbau4vXhI9vJoc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"username\": \"newUsername\",\r\n \"password\": \"newPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://battleship-game.azurewebsites.net/player/667972d4de7925c16486ef11",
+					"protocol": "https",
+					"host": [
+						"battleship-game",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"player",
+						"667972d4de7925c16486ef11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
