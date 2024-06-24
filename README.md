@@ -21,7 +21,7 @@ Game: https://brainblitzassignment.azurewebsites.net/ <br/>
 Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/3%20Brain_Blitz_Assignment_BERR2243.json
 
 Game: https://battleship-game.azurewebsites.net/ <br/>
-Postman: https://github.com/soo-utem/berr2243-2024/blob/main/ASSIGNMENT%20DATABASE%20GROUP%20D.pdf
+Postman: https://raw.githubusercontent.com/soo-utem/berr2243-2024/main/BATTLESHIP%20MULTIPLAYER.postman_collection.json
 
 Game: https://berr2243wsw.azurewebsites.net <br/>
 Postman: https://github.com/soo-utem/berr2243-2024/blob/main/Postman%20JSON%20for%20all%20API.pdf
