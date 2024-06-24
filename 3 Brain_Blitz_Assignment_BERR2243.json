@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "7f8f6c81-9400-4c56-85fc-e2b854e9d713",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34058303"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc2M2NiMTY3NzMyM2QxMGFkM2FjZDUiLCJpYXQiOjE3MTkwMjQ4NzYsImV4cCI6MTcxOTAyODQ3Nn0.J2H1xVZIqR97ScPI_5ueLfqQ2ISEL6O_odEVEDHji4A",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"`name\",\r\n  \"username\": \"username\",\r\n  \"email\": \"email@utem.com\",\r\n  \"password\": \"password\",\r\n  \"age\": 22\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/register",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"email@utem.com\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/login",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot-Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MDk5Y2QwMDVjYjkxNDkyNTlkZTQiLCJpYXQiOjE3MTkxNDI4NjgsImV4cCI6MTcxOTE0NjQ2OH0.-bPhSaVq50TFjVdYDjSvlenOz6HLkipmddV2_WxdnvU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"email@utem.com\",\r\n  \"newPassword\": \"newPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/forgot-password",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/profile/username",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Friend",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"username\",\r\n  \"friendUsername\": \"friendUsername\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/add-friend",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"add-friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove-Friend",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc3ZmQ5YzY1NGQ3NzBkMDZmMjQzODQiLCJpYXQiOjE3MTkxMzk3NTUsImV4cCI6MTcxOTE0MzM1NX0.WwUEX95bHmUjt0bDe_gGFjcZ9pldmgfboI0jIH33GQA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"friendUsername\": \"friendUsername\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/users/remove-friend",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"remove-friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MGZlOWQwMDVjYjkxNDkyNTllNzYiLCJpYXQiOjE3MTkxNDQ1NTYsImV4cCI6MTcxOTE0ODE1Nn0.Cd1iwdEC7JdbaCVkzUwB4Yfm_nWQrnyG-a5yKF1uPWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"name\",\r\n  \"username\": \"username\",\r\n  \"email\": \"email@utem.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/update",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser - (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <AdminToken>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/delete/:userId - (Admin)",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"delete",
+						":userId - (Admin)"
+					],
+					"variable": [
+						{
+							"key": "userId - (Admin)",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc2YTIyMGYyN2IyY2Y0MGMwZjQ3YWQiLCJpYXQiOjE3MTkwNTA4MDcsImV4cCI6MTcxOTA1NDQwN30.OWBhi9u7CgiQfP8h_WmpIEqO_xmbaalwMEJAN-iwXZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <UserToken>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/delete",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/users/logout",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View_Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/quiz/categories",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"quiz",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View-Question-Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/quiz/categories/English",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"quiz",
+						"categories",
+						"English"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"username\",\r\n  \"categoryName\": \"categoryName\",\r\n  \"answers\": [\"answers1\", \"answers2\", \"answers3\", \"answers4\",\"answers5\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/quiz/submit",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"quiz",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"New Category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/category/add-category",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"category",
+						"add-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc2OTU2YThmY2VkZGYzY2E0NmM1ODYiLCJpYXQiOjE3MTkwNDg1MDksImV4cCI6MTcxOTA1MjEwOX0.ksGM0XEKnzXBZhlm9RI7pq8g_1JSkeX7HdEeHKE-jUs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://brainblitzassignment.azurewebsites.net/api/category/delete-category/:categoryName",
+					"protocol": "https",
+					"host": [
+						"brainblitzassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"category",
+						"delete-category",
+						":categoryName"
+					],
+					"variable": [
+						{
+							"key": "categoryName",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
